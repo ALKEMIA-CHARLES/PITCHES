@@ -23,7 +23,7 @@ def add_pitch():
         db.session.add(new_comment)
         db.session.commit()
 
-        return redirect(url_for('pitch_list'))
+        return redirect(url_for('main.pitch_list'))
 
     return render_template('add.html', form=form)
 
@@ -46,7 +46,7 @@ def del_pitch():
         db.session.delete(comment)
         db.session.commit()
 
-        return redirect(url_for('pitch_list'))
+        return redirect(url_for('main.pitch_list'))
     return render_template('delete.html', form=form)
 
 

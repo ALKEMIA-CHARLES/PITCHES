@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>You think you can pitch ? Show us what you got!</h1>
+    <p>Add a pitch to our database and we will tell you if you got what it takes !</p>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        {{form.comment.label}}{{form.comment()}}
+        {{form.category}}
+        {{form.submit()}}
+    </form>
+</div>
+
+{% endblock %}
