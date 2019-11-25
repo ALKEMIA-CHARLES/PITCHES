@@ -74,3 +74,8 @@ def category(cname):
     return render_template("category.html",
                             title = title,
                             posts = posts)
+@main.route("/about")
+def about():
+    title = "About Pitches ?"
+    return render_template("about.html",
+                            title = title)
