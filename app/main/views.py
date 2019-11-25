@@ -74,9 +74,3 @@ def category(cname):
     return render_template("category.html",
                             title = title,
                             posts = posts)
-
-@main.route("/about")
-def about():
-    title = "About 60 Seconds"
-    return render_template("about.html",
-                            title = title)
