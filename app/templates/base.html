@@ -23,7 +23,7 @@
 </head>
 
 <body style="background-color: aqua;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
         <div class="navbar nav">
             <a class="nav-item nav-link" href="{{url_for('main.index')}}" style=" font-family: 'Orbitron',
         sans-serif;
@@ -75,14 +75,18 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-user" style="  font-family: 'Orbitron',
+                        <i class="fas fa-user" style="font-family: 'Orbitron',
         sans-serif;
     ; "></i> Profile </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-info"
                         aria-labelledby="navbarDropdownMenuLink-4">
                         <a class="dropdown-item"
-                            href="{{url_for('main.index', id = current_user.id)}}">{{current_user.username}}</a>
-                        <a class="dropdown-item" href="{{url_for('auth.logout')}}">Log out</a>
+                            href="{{url_for('main.index', id = current_user.id)}}" style=" font-family: 'Orbitron',
+                            sans-serif;
+                            ; " >{{current_user.username}}</a>
+                        <a class="dropdown-item" href="{{url_for('auth.logout')}}" style="  font-family: 'Orbitron',
+        sans-serif;
+    ; ">Log out</a>
                     </div>
                 </li>
                 {%else%}
