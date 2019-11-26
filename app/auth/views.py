@@ -18,7 +18,7 @@ def register():
         db.session.commit()
 
         return redirect(url_for("auth.login"))
-    title = "Sign Up to 60 Seconds"
+    title = "Sign Up to Pitches"
     return render_template("auth/signup.html",
                            signup_form=signup_form,
                            title=title)
@@ -35,7 +35,7 @@ def login():
 
         flash("Invalid Username or Password")
 
-    title = "Login to 60 Seconds"
+    title = "Login to Pitches"
     return render_template("auth/login.html",
                            login_form=login_form,
                            title=title)

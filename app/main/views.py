@@ -13,6 +13,7 @@ def index():
 
 
 @main.route("/add", methods=["GET", "POST"])
+@login_required
 def add_pitch():
     form = AddPitch()
     if form.validate_on_submit():

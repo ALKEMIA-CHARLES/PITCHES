@@ -4,7 +4,7 @@
     <h1>check out our pitchlist</h1>
     <ul>
         {% for comment in comments  %}
-        <li>{{comment}}</li>
+        <li>{{comment.id}}. {{comment}}</li>
         {% endfor %}
     </ul>
 </div>
