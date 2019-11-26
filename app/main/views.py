@@ -19,8 +19,9 @@ def add_pitch():
     if form.validate_on_submit():
 
         comment = form.comment.data
-    
-        new_comment = Comments(comment)
+        category = form.category.data
+
+        new_comment = Comments(comment_section=comment, categories=category)
         db.session.add(new_comment)
         db.session.commit()
 

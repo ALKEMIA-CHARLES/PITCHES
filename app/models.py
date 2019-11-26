@@ -17,8 +17,9 @@ class Comments(db.Model):
     comment_section = db.Column(db.Text)
     categories = db.Column(db.String)
 
-    def __init__(self, comment_section):
+    def __init__(self, comment_section, categories):
         self.comment_section = comment_section
+        self.categories = categories
 
     def __repr__(self):
         return f"Take a look at this pitch, what do you think?: {self.comment_section}"
