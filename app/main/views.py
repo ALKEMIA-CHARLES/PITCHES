@@ -74,7 +74,7 @@ def users():
 
 @main.route("/category/<cname>")
 def category(cname):
-    posts = Comments.query.filter_by(category=cname).all()
+    posts = Comments.query.filter_by(categories=cname).all()
     title = cname
 
     return render_template("category.html",
