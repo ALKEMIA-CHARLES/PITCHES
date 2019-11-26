@@ -28,8 +28,12 @@
             <a class="nav-item nav-link" href="{{url_for('main.index')}}" style=" font-family: 'Orbitron',
         sans-serif;
     ; ">HOME</a>
-            <a class="nav-item nav-link" href="{{url_for('main.add_pitch')}}">Add Pitch</a>
-            <a class="nav-item nav-link" href="{{url_for('main.pitch_list')}}">Pitch list</a>
+            <a class="nav-item nav-link" href="{{url_for('main.add_pitch')}}" style=" font-family: 'Orbitron',
+        sans-serif;
+    ;  ">Add Pitch</a>
+            <a class="nav-item nav-link" href="{{url_for('main.pitch_list')}}" style="  font-family: 'Orbitron',
+        sans-serif;
+    ;">Pitch list</a>
             <a class="nav-item nav-link" href="{{url_for('main.del_pitch')}}"> Delete pitch</a>
             <div class="collapse navbar-collapse navbar-light bg-light">
                 {%if current_user.is_authenticated%}
