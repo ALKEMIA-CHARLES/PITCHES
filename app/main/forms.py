@@ -11,7 +11,7 @@ class AddPitch(FlaskForm):
     submit = SubmitField('Add Pitch')
 
 class DelPitch(FlaskForm):
-     id = IntegerField("ID number of pitch you would like to delete")
+     id = IntegerField("ID number of pitch you would like to delete " )
      submit = SubmitField("Remove Pitch")
 
 class UpdateProfile(FlaskForm):

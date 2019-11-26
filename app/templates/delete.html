@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-    <p> Would you like to delete one of the pitches ?</p>
-    <p>If so, please fill out their ID in order to remove them from the pitchlist</p>
+    <p style="font-family: 'Orbitron', sans-serif;"> Would you like to delete one of the pitches ?</p>
+    <p style="font-family: 'Orbitron', sans-serif;">If so, please fill out their ID in order to remove them from the
+        pitchlist</p>
     <form method="POST">
         {{form.hidden_tag()}}
         {{form.id.label}} {{form.id}}
