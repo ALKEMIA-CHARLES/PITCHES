@@ -16,7 +16,9 @@ def index():
 @login_required
 def add_pitch():
     form = AddPitch()
+    print('pre validation')
     if form.validate_on_submit():
+        print('submitting')
 
         comment = form.comment.data
         category = form.category.data
