@@ -6,19 +6,29 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3"></div>
-        <div class="col-lg-6">
+        <div style="font-family:  'Orbitron',
+        sans-serif;
+    ; ;" class="col-lg-6 " style="background-color: lightgrey;">
             {%for message in get_flashed_messages()%}
-            <div class="alert alert-danger">
+            <div class="alert alert-danger" style="font-family: 'Orbitron',
+        sans-serif;
+    ;;">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 {{message}}
             </div>
             {%endfor%}
             <form class="border border-light p-5 my-2" method="POST">
-                <p class="h4 mb-4 text-center">Sign in</p>
+                <p style="font-family: 'Orbitron',
+        sans-serif;
+    ;;" class="h4 mb-4 text-center ">Sign in</p>
                 {{wtf.quick_form(login_form)}}
                 <div class="text-center">
-                    <p>Not a member?
-                        <a href="{{url_for('auth.register')}}">Sign Up</a>
+                    <p style="font-family: 'Orbitron',
+        sans-serif;
+    ;  ;">Not a member?
+                        <a href="{{url_for('auth.register')}}" style="font-family: 'Orbitron',
+        sans-serif;
+    ;  ;">Sign Up</a>
                     </p>
                 </div>
             </form>

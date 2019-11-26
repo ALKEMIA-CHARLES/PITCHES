@@ -27,21 +27,21 @@
         <div class="navbar nav">
             <a class="nav-item nav-link" href="{{url_for('main.index')}}" style=" font-family: 'Orbitron',
         sans-serif;
-    ; ">HOME</a>
-            <a class="nav-item nav-link" href="{{url_for('main.add_pitch')}}" style=" font-family: 'Orbitron',
+    ;  color:aqua;">HOME</a>
+            <a class="nav-item nav-link" href="{{url_for('main.add_pitch')}}" style=" color: aqua;  font-family: 'Orbitron',
         sans-serif;
     ;  ">Add Pitch</a>
-            <a class="nav-item nav-link" href="{{url_for('main.pitch_list')}}" style="  font-family: 'Orbitron',
+            <a class="nav-item nav-link" href="{{url_for('main.pitch_list')}}" style=" color: aqua; font-family: 'Orbitron',
         sans-serif;
     ;">Pitch list</a>
-            <a class="nav-item nav-link" href="{{url_for('main.del_pitch')}}" style="  font-family: 'Orbitron',
+            <a class="nav-item nav-link" href="{{url_for('main.del_pitch')}}" style=" color: aqua; font-family: 'Orbitron',
         sans-serif;
     ; "> Delete pitch</a>
             <div class="collapse navbar-collapse navbar-light bg-light">
                 {%if current_user.is_authenticated%}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" font-family:
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" background-color: black;  color: aqua; font-family:
                         'Orbitron',
                         sans-serif;
                         ; ">
@@ -69,24 +69,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('main.about')}}" style=" font-family: 'Orbitron',
         sans-serif;
-    ;  ">About</a>
+    ;  color: aqua;">About</a>
                 </li>
                 {%if current_user.is_authenticated%}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class="fas fa-user" style="font-family: 'Orbitron',
-        sans-serif;
-    ; "></i> Profile </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-info"
-                        aria-labelledby="navbarDropdownMenuLink-4">
-                        <a class="dropdown-item"
-                            href="{{url_for('main.index', id = current_user.id)}}" style=" font-family: 'Orbitron',
-                            sans-serif;
-                            ; " >{{current_user.username}}</a>
+                        aria-expanded="false" style="color: aqua ; font-family: 'Orbitron', sans-serif; ; ">
+                        <i class="fas " style="font-family: 'Orbitron',
+        sans-serif; ; color: aqua;"></i> Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info "
+                        aria-labelledby="navbarDropdownMenuLink-4" style="background-color: lightgrey;">
+                        <a class="dropdown-item" href="{{url_for('main.index', id = current_user.id)}}" style=" font-family: 'Orbitron',
+                            sans-serif; background-color: lightgrey
+                            ; ">{{current_user.username}}</a>
                         <a class="dropdown-item" href="{{url_for('auth.logout')}}" style="  font-family: 'Orbitron',
         sans-serif;
-    ; ">Log out</a>
+    ;  background-color: lightgrey;">Log out</a>
                     </div>
                 </li>
                 {%else%}
