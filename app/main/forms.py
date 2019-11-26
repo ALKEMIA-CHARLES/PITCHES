@@ -14,6 +14,7 @@ class DelPitch(FlaskForm):
      id = IntegerField("ID number of pitch you would like to delete " )
      submit = SubmitField("Remove Pitch")
 
-class UpdateProfile(FlaskForm):
-    bio = TextAreaField("Tell us about yourself")
-    submit = SubmitField("Update")
+class FeedbackForm(FlaskForm):
+    feedback = TextAreaField("Don't be shy ! This is a free space...")
+    submit = SubmitField("Submit Comment")
+

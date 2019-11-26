@@ -9,6 +9,13 @@ from datetime import datetime
 def user_loader(user_id):
     return User.query.get(int(user_id))
 
+class Feedback(db.Model):
+
+    __table__name = 'feedback'
+    id = db.Column(db.Integer, primary_key=True)
+    feedback_section = db.Column(db.Text)
+    user_id =  db.Column(db.Integer, db.ForeignKey('users.id'))
+    comments_id =  db.Column(db.Integer, db.ForeignKey('comments.id'))
 
 class Comments(db.Model):
 

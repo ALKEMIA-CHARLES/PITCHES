@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-    <h1 style="font-family: 'Orbitron' , sans-serif;" >Whoa ! check out the list of pitches over here</h1>
+    <h1 style="font-family: 'Orbitron' , sans-serif;">Whoa ! check out the list of pitches over here</h1>
     <ul>
         {% for comment in comments  %}
-        <li style=" font-family: 'Orbitron' , sans-serif;" >{{comment.id}}. {{comment}}</li>
+        <li style=" font-family: 'Orbitron' , sans-serif;">{{comment.id}}. {{comment}} <a
+                href="/feedback/{{ comment.id }}" style="color:aqua;"> view comments/comment on pitch</a></li>
         {% endfor %}
     </ul>
 </div>

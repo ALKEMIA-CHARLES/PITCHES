@@ -1,7 +1,7 @@
 from flask import (render_template, request, redirect, url_for, abort)
 from . import main
-from .forms import AddPitch, DelPitch, UpdateProfile
-from ..models import User, Comments
+from .forms import AddPitch, DelPitch, FeedbackForm
+from ..models import User, Comments, Feedback
 from flask_login import login_required, current_user
 from .. import db, photos
 
@@ -66,13 +66,22 @@ def update_pic(id):
                             id=id))
 
 
-@main.route("/users")
-def users():
-    users = User.query.all()
-    title = "Browse users"
-    return render_template("users.html",
-                           users=users,
-                           title=title)
+@main.route("/feedback/<int:comment_id>", methods=['GET', 'POST'])
+@login_required
+def feedback(comment_id):
+
+    form = FeedbackForm()
+
+    if form.validate_on_submit():
+        feedback = form.feedback.data
+
+        new_feedback = Feedback(feedback_section=feedback, user_id=current_user.id, comments_id=comment_id)
+        db.session.add(new_feedback)
+        db.session.commit()
+
+    all_feedback = Feedback.query.filter_by(comments_id=comment_id).all()
+    title = 'feedback'
+    return render_template("feedback.html", all_feedback=all_feedback, title=title, form=form)
 
 
 @main.route("/category/<cname>")

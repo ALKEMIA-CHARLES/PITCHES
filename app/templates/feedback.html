@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+
+    <form method="POST" style=" font-family: 'Orbitron' , sans-serif;">
+        {{form.hidden_tag()}}
+        {{form.feedback.label}}
+        <div style="display: flex;">
+            {{form.feedback()}}
+            {{form.submit()}}
+        </div>
+    </form>
+    {% for feedback in all_feedback  %}
+    <li style=" font-family: 'Orbitron' , sans-serif;">{{feedback.feedback_section}}</li>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}
