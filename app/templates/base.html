@@ -22,10 +22,12 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: aqua;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar nav">
-            <a class="nav-item nav-link" href="{{url_for('main.index')}}">HOME</a>
+            <a class="nav-item nav-link" href="{{url_for('main.index')}}" style=" font-family: 'Orbitron',
+        sans-serif;
+    ; ">HOME</a>
             <a class="nav-item nav-link" href="{{url_for('main.add_pitch')}}">Add Pitch</a>
             <a class="nav-item nav-link" href="{{url_for('main.pitch_list')}}">Pitch list</a>
             <a class="nav-item nav-link" href="{{url_for('main.del_pitch')}}"> Delete pitch</a>
