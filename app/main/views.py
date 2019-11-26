@@ -19,7 +19,7 @@ def add_pitch():
     if form.validate_on_submit():
 
         comment = form.comment.data
-
+    
         new_comment = Comments(comment)
         db.session.add(new_comment)
         db.session.commit()
